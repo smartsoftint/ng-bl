@@ -1,0 +1,61 @@
+{
+  "session": "",
+  "idUser": "",
+  "user": "",
+  "firstName": "",
+  "lastName": "",
+  "menu": {
+    "C&R": {
+      "subItems": [
+        {
+          "identity": "",
+          "url":"",
+          "subItems": [
+            {
+              "identy": "",
+              "action": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+
+//con datos
+
+{
+  "session": "1234567889",
+  "idUser": "hjug",
+  "user": "ggg",
+  "firstName": "Juan Andres",
+  "lastName": "Segreda Johanning",
+  "menu": {
+    "C&R": {
+      "subItems": [
+        {
+          "identity": "Herramientas",
+          "subItems": [
+            {
+              "identy": "Perfiles",
+              "action": "profiles"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+
+//menu
+nombre componente
+  ["submenus"
+    [ "Componente 1",
+      "...",
+      "Comnponente n"
+    ]
+  "...",
+  "submenu n"
+  ]

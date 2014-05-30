@@ -1,0 +1,21 @@
+{
+  "name": "NG",
+  "version": "1.0.0",
+  "description": "Prototipo Data Access Sentinel NG",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "~1.0.2",
+    "express": "~4.1.1",
+    "mongoose": "~3.8.8",
+    "async": "~0.8.0",
+    "crypto": "0.0.3",
+    "unirest": "^0.2.7",
+    "cryptr": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lmatamoros",
+  "license": "ISC"
+}

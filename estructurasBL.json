@@ -1,0 +1,415 @@
+
+//POST - /Sentinel/v1.0/Roles
+[{
+	"id": "Rol_55",
+	"description": "Descripcion del Rol 55",
+	"permissions": [
+	{
+		"func": "permiso29",
+		"actions": ["SELECT","INSERT","DELETE"],
+		"url": ".../permiso55/%id%"
+	}
+	]
+}]
+
+
+//PUT - /Sentinel/v1.0/Roles
+[{
+	"id": "Rol_15",
+	"description": "nueva descri. del Rol 15",
+	"permissions": [
+	{
+		"id": "permiso29",
+    "text" : "Permiso 29",
+		"actions": ["SELECT","DELETE"],
+		"url": ".../permiso29/%id%"
+	},
+	{
+		"id": "permiso30",
+    "text" : "Permiso 30",
+		"actions": ["SELECT"],
+		"url": ".../permiso30/%id%"
+	}
+	]
+}]
+
+//DELETE - /Sentinel/v1.0/Roles
+
+["23002","Rol_51"]
+
+
+//POST - /Sentinel/v1.0/Roles/:id
+{
+	"id" : "Rol_22",
+	"description" : "Descripcion del Rol 22",
+	"permissions" : [{
+			"id" : "permiso3",
+      "text" : "Permiso 3",
+			"actions" : ["SELECT", "DELETE", "INSERT"],
+			"url" : ".../permiso3/%id%"
+		}, {
+			"id" : "permiso4",
+      "text" : "Permiso 4",
+			"actions" : ["INSERT", "SELECT"],
+			"url" : ".../permiso4/%id%"
+		}, {
+			"id" : "permiso5",
+      "text" : "Permiso 5",
+			"actions" : ["INSERT", "SELECT", "DELETE"],
+			"url" : ".../permiso5/%id%"
+		}
+	]
+}
+
+//POST - /Sentinel/v1.0/Users
+[{
+		"id" : "123",
+		"identification" : "2-0123-0654",
+		"name" : "Pablo",
+		"email" : "pmora@mail.com",
+		"address" : "S.J. Costa Rica",
+		"roles" : ["Rol_1", "Rol_2", "Rol 3"],
+		"user" : "pmora",
+		"password" : "password",
+		"permissions" : [{
+				"actions" : ["CREATE", "UPDATE", "SELECT", "DELETE"],
+        "url":".../permiso31/%id%",
+        "text": "Permiso 31",
+				"id" : "permiso31"
+			}, {
+				"actions" : ["CREATE", "UPDATE", "SELECT", "DELETE"],
+				"url":".../permiso31/%id%",
+        "text": "Permiso 31",
+				"id" : "permiso32"
+			}
+		]
+	}, {
+		"id" : "456",
+		"identification" : "1-0284-0785",
+		"name" : "Juan",
+		"email" : "jperez@mail.com",
+		"address" : "S.J. Costa Rica",
+		"roles" : ["Rol_3", "Rol_4", "Rol 5"],
+		"user" : "jperez",
+		"password" : "password",
+		"permissions" : [{
+				"actions" : ["CREATE", "UPDATE", "SELECT", "DELETE"],
+				"func" : "permiso33"
+			}, {
+				"actions" : ["CREATE", "UPDATE", "SELECT", "DELETE"],
+				"func" : "permiso34"
+			}, {
+				"actions" : ["CREATE", "UPDATE", "SELECT", "DELETE"],
+				"func" : "permiso31"
+			}
+		]
+	}
+]
+
+
+//PUT - /Sentinel/v1.0/Users
+[
+	{
+		"id" : "753241",
+		"identification" : "1-1084-0555",
+		"name" : "Juan",
+		"email" : "jperezt@mail.com",
+		"address" : "S.J. Costa Rica",
+		"roles" : ["Rol_3", "Rol_4", "Rol 5"],
+		"user" : "jperezt",
+		"password" : "password",
+		"permissions" : [{
+				"actions" : ["CREATE", "UPDATE", "SELECT", "DELETE"],
+				"func" : "permiso33",
+        "url" : "/permiso33/"
+			}
+		]
+	}
+]
+
+//DELETE - /Sentinel/v1.0/Users
+["147852369","753241"]
+
+
+//POST - /Sentinel/v1.0/Users/:id
+{
+		"id" : "78963",
+		"identification" : "1-0204-0785",
+		"name" : "Juan",
+		"lastName" : "Rojas",
+		"surName" : "Torres",
+		"email" : "jrojas@mail.com",
+		"address" : "S.J. Costa Rica",
+		"roles" : ["Rol_3", "Rol_4", "Rol 5"],
+		"user" : "jrojas",
+		"password" : "password",
+		"permissions" : [{
+				"actions" : ["CREATE", "UPDATE", "SELECT", "DELETE"],
+				"func" : "permiso33"
+			}, {
+				"actions" : ["CREATE", "UPDATE", "SELECT", "DELETE"],
+				"func" : "permiso31"
+			}
+		]
+}
+
+
+//PUT - /Sentinel/v1.0/Roles/:id/permissions
+[
+  {
+    "func": "permiso10",
+    "actions": [
+      "INSERT",
+      "SELECT",
+      "UPDATE"
+    ]
+  },
+  {
+    "func": "permiso11",
+    "actions": [
+      "INSERT",
+      "UPDATE"
+    ]
+  }
+]
+
+
+
+//DELETE - /Sentinel/v1.0/Roles/:id/permissions
+["permiso3","permiso4"]
+
+//POST - /Sentinel/v1.0/Users/:id/permissions
+[
+  {
+    "func": "permiso41",
+    "actions": [
+      "CREATE",
+      "UPDATE"
+    ]
+  },
+  {
+    "func": "permiso42",
+    "actions": [
+      "CREATE",
+      "UPDATE",
+      "SELECT"
+    ]
+  }
+]
+
+//PUT - /Sentinel/v1.0/Users/:id/permissions
+[{"func":"permiso41","actions":["CREATE","UPDATE"]},{"func":"permiso42","actions":["CREATE","UPDATE","SELECT"]}]
+
+//DELETE - /Sentinel/v1.0/Users/:id/permissions
+["permiso31","permiso41"]
+
+
+
+//login
+{"user":"jperez","password":"password"}
+
+
+//logout
+{"user":"pmora","password":"password"}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//get usuarios
+{"type":"GET", "session" : "kjjsfs", "body":{}}
+
+//post usuarios
+{
+  "type": "POST",
+  "session": "12345",
+  "body": [
+    {
+      "id": "4444",
+      "identification": "2-0123-0654",
+      "name": "Pablo",
+      "lastName": "Gomez",
+      "surName": "Mora",
+      "email": "pgomez@mail.com",
+      "address": "S.J. Costa Rica",
+      "roles": [
+        "Rol_1",
+        "Rol_2",
+        "Rol 3"
+      ],
+      "user": "pgomez",
+      "password": "password",
+      "permissions": [
+        {
+          "actions": [
+            "CREATE",
+            "UPDATE",
+            "SELECT",
+            "DELETE"
+          ],
+          "func": "permiso31"
+        },
+        {
+          "actions": [
+            "CREATE",
+            "UPDATE",
+            "SELECT",
+            "DELETE"
+          ],
+          "url": "url permission",
+          "func": "permiso32"
+        }
+      ]
+    }
+  ]
+}
+
+//PUT users
+{
+  "type": "PUT",
+  "session": "12345",
+  "body": [
+    {
+      "id": "3265287",
+      "identification": "4-444-0444",
+      "name": "Pablo",
+      "lastName": "Lara",
+      "surName": "Mora",
+      "email": "plaram@mail.com",
+      "address": "S.J. Costa Rica",
+      "roles": [
+        "Rol_1",
+        "Rol_2",
+        "Rol 3"
+      ],
+      "user": "plaram",
+      "password": "password",
+      "permissions": [
+        {
+          "actions": [
+            "CREATE",
+            "UPDATE",
+            "SELECT",
+            "DELETE"
+          ],
+          "func": "permiso31"
+        },
+        {
+          "actions": [
+            "CREATE",
+            "UPDATE",
+            "SELECT",
+            "DELETE"
+          ],
+          "url": "url permission",
+          "func": "permiso32"
+        }
+      ]
+    }
+  ]
+}
+
+//delete users 
+{"type":"DELETE", "session":"1234","body":["5555", "98765"]}
+
+
+//post user by id
+{
+  "type": "POST",
+  "session": "1234",
+  "body": [
+    {
+      "id": "78963",
+      "identification": "1-0204-0785",
+      "name": "Juan",
+      "lastName": "Rojas",
+      "surName": "Torres",
+      "email": "jrojas@mail.com",
+      "address": "S.J. Costa Rica",
+      "roles": [
+        "Rol_3",
+        "Rol_4",
+        "Rol 5"
+      ],
+      "user": "jrojas",
+      "password": "password",
+      "permissions": [
+        {
+          "actions": [
+            "CREATE",
+            "UPDATE",
+            "SELECT",
+            "DELETE"
+          ],
+          "func": "permiso33"
+        },
+        {
+          "actions": [
+            "CREATE",
+            "UPDATE",
+            "SELECT",
+            "DELETE"
+          ],
+          "func": "permiso31"
+        }
+      ]
+    }
+  ]
+}
+
+
+sistema 
+herramientas
+consultas
+investigacion
+
+
+{
+  "id" : "Rol_001",
+  "description" : "Rol 001 - consultas",
+  "permissions" : [{
+      "id" : "permiso1",
+      "text" : "Permiso 1 - Consulta Usuarios",
+      "actions" : ["SELECT"],
+      "url" : ".../permiso1/%id%"
+    }, {
+      "id" : "permiso2",
+      "text" : "Permiso 2 - Consulta Roles",
+      "actions" : ["SELECT"],
+      "url" : ".../permiso2/%id%"
+    }, {
+      "id" : "permiso3",
+      "text" : "Permiso 3 - Consulta Permisos",
+      "actions" : ["SELECT"],
+      "url" : ".../permiso3/%id%"
+    }
+  ]
+}
+
+
+
+----------------------------------
+[{
+    "id" : "U-11401202492152",
+    "identification" : "2-0222-0222",
+    "name" : "asdf",
+    "email" : "asdf@mail.com",
+    "address" : "S.J. Costa Rica",
+    "roles" : [0],
+    "user" : "asdf",
+    "password" : "password",
+    "permissions" : [0]
+  }
+]
+
+
+U-11401202492152
+
+
+id: 
+identification: "yyyy"
+name: "yy"
+email: "y"
+address: "y"
+
+user: "y"
